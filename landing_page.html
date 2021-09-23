@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+<html>
+<title>Landing Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<body style="max-width:600px">
+
+<style>
+    .container{
+        height: 200px;
+        position: relative;
+    }
+    .vertical-center{
+        position: absolute;
+        top: 50%;
+        left: 35%;
+    }
+
+    .buttonClass{
+        width: 200px
+    }
+</style>
+
+
+<header class="w3-bar w3-card w3-theme">
+  <h1 style="text-align: center">Personal Helper</h1>
+</header>
+
+<div class="container">
+<div class="vertical-center">
+ <input type="button" class="buttonClass" onclick="location.href='index.html';" style="background-color:#009688; "  id="getHelpButton" value="Get Help">
+ <input type="button" class="buttonClass" onclick="location.href='login.html';" style="background-color:#009688; margin-top: 20px;"  id="loginButton" value="Login">
+</div> </div>
+
+<script>
+
+</script>
+
 </body>
-</html>
