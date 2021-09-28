@@ -56,7 +56,7 @@ function processServerRequest(request, response){
 
     console.log(`Username is ${username}`);
 
-    // write query to return film data where primary key is value passed
+    // write query to insert new row in Advice Giver table
     username = `"${username}"`
     password = `"${password}"`
     firstname = `"${firstname}"`
