@@ -63,7 +63,10 @@ function processServerRequest(request, response){
     lastname = `"${lastname}"`
     occupation = `"${occupation}"`
     bio = `"${bio}"`
-    sqlquery = `insert into AdviceGiver(aUsername, aPassword, aFirstName, aLastName, aOccupation, aShortBiography) VALUES ( ${username}, ${password}, ${firstname}, ${lastname}, ${occupation}, ${bio})`
+    s1 = `"${s1}"`
+    s2 = `"${s2}"`
+    s3 = `"${s3}"`
+    sqlquery = `insert into AdviceGiver(aUsername, aPassword, aFirstName, aLastName, aOccupation, aShortBiography, aSpecialty1, aSpecialty2, aSpecialty3) VALUES ( ${username}, ${password}, ${firstname}, ${lastname}, ${occupation}, ${bio}, ${s1}, ${s2}, ${s3})`
     
     response.write(`<p>Thanks for creating a profile! Here is the information you entered:</p>`);
 
