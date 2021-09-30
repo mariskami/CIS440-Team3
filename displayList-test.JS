@@ -62,5 +62,16 @@ function processResult(err, result){
 
 function printUser(record){
 
-    output += `<p>${record.aFirstName} <strong>${record.aLastName}</strong></p>`;
+    output += `<p>${record.aFirstName} ${record.aLastName}</p>`;
 }
+
+function buildHtml(req) {
+    var header = '';
+    var body = '';
+  
+    // concatenate header string
+    // concatenate body string
+  
+    return '<!DOCTYPE html>'
+         + '<html><head>' + header + '</head><body>' + body + output + '</body></html>';
+  };
