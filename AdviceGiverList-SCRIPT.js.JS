@@ -55,7 +55,7 @@ con.connect(
     }
 )
 
-let sqlquery = `SELECT * from AdviceGiver RIGHT JOIN AdviceGiverActiveStatus ON aAdviceGiverID = hAdviceGiverID WHERE hIsActive = 1`
+let sqlquery = `SELECT * from AdviceGiver where aIsActive = 1`
 con.query(sqlquery, processResult);
 
     con.end()
