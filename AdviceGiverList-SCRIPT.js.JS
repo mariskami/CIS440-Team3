@@ -82,18 +82,23 @@ function printUser(record){
     body{
         font-family:Arial, Helvetica, sans-serif;
         max-width:500px;
-        background-color:#caffbf;
+        background-color:white;
         padding:10px;
     }
     h3{
-        border: solid 1px gray;
-        padding: 15px;
+        border: none;
+        padding: 10px;
         text-align: center;
-        background-color: #fdffb6;
+        background-color: #009688;
+        border-radius: 10px;
+        color: white;
     }
     #job{
-        background-color: bisque;
-        text-decoration: underline;
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 2px 10px;
+        border-radius: 10px;
     }
   
     </style>
