@@ -1,4 +1,5 @@
 const mysql = require("mysql");
+var userID = 0;
 
 const db = mysql.createConnection({
     host: process.env.DATABASE_HOST,
@@ -56,22 +57,39 @@ exports.login = (req, res) => {
     // const { username, password, passwordConfirm, firstName, lastName, occupation, bio,
     // spec1, spec2, spec3 } = req.body;
 
-    var getIDQuery = `SELECT aAdviceGiverID from AdviceGiver where aUsername = "${username}" and aPassword = "${password}"`
+    var getIDQuery = `SELECT aAdviceGiverID from AdviceGiver where aUsername = "${username}" and aPassword = "${password}"`;
     
     db.query(getIDQuery, (err, results) => {
         if (err) {
             console.log(err);
         } else {
-            console.log(results[0])
+            console.log(results[0]);
 
             if (results[0] == undefined) {
                 return res.render('login', {
                     message: 'Incorrect Username and/or Password'
                 });
             } else {
-                return res.render('login', {
-                    message: 'Logged In'
+                console.log('Logged In with ID: ' + results[0].aAdviceGiverID);
+
+                var toggleActiveQuery = `UPDATE AdviceGiver SET aIsActive = 1 WHERE aAdviceGiverID = ${results[0].aAdviceGiverID}`;
+
+                db.query(toggleActiveQuery, (err, results) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        console.log('User set to active');
+                    }
                 });
+
+                const open = require('open');
+                open('chat.hbs');
+
+                return res.render('login', {
+                    message: 'Logged in.  Please wait to be connected with an advice seeker'
+                });
+                // userID = results[0].aAdviceGiverID;
+
             }
         }
     })
