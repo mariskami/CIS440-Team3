@@ -46,7 +46,11 @@ function appendMessageSender(message) {
     time = new Date()
     hour = time.getHours()
     currentTime = "0"
+    minutes = time.getMinutes()
 
+    if (minutes < 10)
+        minutes = "0" + minutes;
+    
     if (hour > 12){
         hour = hour - 12
         currentTime = hour + ":" + time.getMinutes() + " PM" }
