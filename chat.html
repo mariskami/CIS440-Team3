@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat UI</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <link href="chat.css" type="text/css" media="screen" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="chat-container">
+        <div id="chat-title">
+            <span>Advice Helper</span>
+            <button id="end-chat-button">End Chat</button>
+
+        </div>
+        <div id="chat-message-list">
+        </div>
+        <form id="chat-form">
+            <input id="message-input" type="text" placeholder="Type a message">
+            <button type="submit" id="send-chat-button">Send</button>
+        </div>
+    </div>
+</body>
+</html>
