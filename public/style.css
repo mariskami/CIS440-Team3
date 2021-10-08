@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(to right, rgba(102, 125, 252, 0.986) 0%,  #246FA8 100%);
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #246FA8 100%;
+    color: white;
+    padding: 30px 60px;
+    display:flex;
+    justify-content:space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+nav li a:hover {
+    color: palegreen;
+    text-decoration: none;
+}
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.p-5 {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px 10px 10px 10px;
+}
